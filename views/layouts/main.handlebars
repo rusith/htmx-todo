@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example App</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+
+  {{#> components/modal  hidden="hidden" }}
+    My Content
+  {{/components/modal}}
+</html>

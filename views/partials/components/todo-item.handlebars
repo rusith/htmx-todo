@@ -1,0 +1,18 @@
+<div id="todo-item-{{todo.id}}">
+  {{todo.title}}
+  <button
+    class="w-10 bg-blue-500"
+    hx-trigger="click"
+    hx-target="#modal"
+    hx-swap="outerHTML"
+    hx-get="/edit-todo/{{todo.id}}"
+  >Edit</button>
+
+  <button
+    class="w-10 bg-blue-red"
+    hx-trigger="click"
+    hx-target="#todo-item-{{todo.id}}"
+    hx-swap="delete"
+    hx-delete="/delete-todo/{{todo.id}}"
+  >Delete</button>
+</div>
