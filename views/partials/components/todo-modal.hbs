@@ -1,11 +1,11 @@
 {{#> components/modal }}
   <form 
     {{#if todo}}
-    hx-post="/update-todo/{{todo.id}}" 
+    hx-put="/todos/{{todo.id}}" 
     hx-select-oob="#todo-item-{{todo.id}},#modal"
     {{/if}}
     {{#unless todo }}
-    hx-post="/create-todo" 
+    hx-post="/todos" 
     hx-select-oob="#todo-list,#modal"
     {{/unless}}
     hx-trigger="submit"
