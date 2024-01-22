@@ -1,0 +1,9 @@
+<div>
+  <button class="bg-blue-500 p-1 text-white m-2 rounded" 
+    hx-trigger="click"
+    hx-target="#modal"
+    hx-swap="outerHTML"
+    hx-get="/add-todo"
+>Add Todo</button>
+  {{> components/todos-list }}
+</div>
